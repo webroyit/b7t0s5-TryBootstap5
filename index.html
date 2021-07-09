@@ -7,6 +7,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" /> 
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="styles.css">
 
     <title>WRI Bootcamp</title>
@@ -350,7 +351,7 @@
             <div class="row g-4">
                 <div class="col-md">
                     <h2 class="text-center mb-4">Contact Info</h2>
-                    
+
                     <ul class="list-group list-group-flush lead">
                         <li class="list-group-item">
                             <span class="fw-bold">Main Location:</span> 123 Web Camp St
@@ -369,10 +370,23 @@
                         </li>
                     </ul>
                 </div>
+                <div class="col-md">
+                    <div id="map"></div>
+                </div>
             </div>
         </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoicm95d2ViIiwiYSI6ImNrcXdqNTdzajBvc3Uyd3BtM205czJ0eTUifQ.UMPPf0PLdST-YiJ6aOXnYQ';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [-82.4549148, 27.9728932],
+            zoom: 16,
+        });
+    </script>
 </body>
 </html>
