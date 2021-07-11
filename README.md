@@ -1,4 +1,5 @@
 # WRI Bootcamp
+Practicing using bootstap5.  The template is from Traversy Media youtube channel.
 
 - Random images from https://randomuser.me/api/portraits/men/35.jpg
 
